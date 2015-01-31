@@ -13,12 +13,13 @@ Game rules:
 print(rules)
 print("Good luck!")
 
-# choose a random integer in 1:100
+# choose a random integer in 1 to 10
 theNumber = randint(1,10) 
 
-# 5 times for player to win
+# 3 times for player to guess
 times = 3
 
+# use while/else loop to implement the game
 while times > 0:
 	 guess = int(raw_input("Your guess:"))
 	 if guess == theNumber:
