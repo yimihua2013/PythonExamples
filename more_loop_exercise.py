@@ -36,6 +36,25 @@ def product(seqs):
 		result *= seqs[i]
 	return result
 
+# remove duplicates in a list
+def remove_duplicates(input_list):
+	new_list = []
+	for item in input_list:
+		if item not in new_list:
+			new_list.append(item)
+	return new_list
+
+# compute the median
+def median(seqs):
+	seqs_sort = sorted(seqs)
+	lex = len(seqs_sort)
+	if lex%2 == 0:
+		middle1 = lex/2
+		return (seqs_sort[middle]+seqs_sort[middle-1])/2.0
+	else:
+		middle2 = (lex+1)/2
+		return seqs_sort[middle2-1]
+
 
 # execute the functions
 
@@ -43,5 +62,7 @@ num_list = [2,4,5,78,9,10,4]
 print "the even numbers are: " + str(purify(num_list))
 print "4 appears " + str(count(num_list, 4)) + " times" + " in the list" +" "+ str(num_list)
 print "The product of the list " +str(num_list)+ " is: " + str(product(num_list))
+print "After removing the duplicates, the new list is: " + str(remove_duplicates(num_list))
+print "The median of the list is: " +str(median(num_list))
 
 
